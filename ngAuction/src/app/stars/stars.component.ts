@@ -1,17 +1,15 @@
-import {
-  Component,
-  OnInit,
-  Input
-} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'nga-stars',
   templateUrl: './stars.component.html',
-  styleUrls: ['./stars.component.css']
+  styleUrls: ['./stars.component.css'],
 })
 export class StarsComponent implements OnInit {
-  @Input() count = 5;
-  @Input() rating = 0;
+  @Input()
+  count = 5;
+  @Input()
+  rating = 0;
   stars: boolean[] = [];
 
   constructor() {}
@@ -21,5 +19,4 @@ export class StarsComponent implements OnInit {
       this.stars.push(i > this.rating);
     }
   }
-
 }

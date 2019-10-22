@@ -4,15 +4,13 @@ import { Product } from '../shared/product.service';
 @Component({
   selector: 'nga-product-item',
   templateUrl: './product-item.component.html',
-  styleUrls: ['./product-item.component.css']
+  styleUrls: ['./product-item.component.css'],
 })
 export class ProductItemComponent implements OnInit {
+  @Input()
+  product: Product;
 
-  @Input() product: Product;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
